@@ -4,20 +4,12 @@ from database_operations.expense import *
 from database_operations.groups import *
 from database_operations.groups_users import *
 
+# create_user_table()
+# create_categories_table()
+# create_expense_table()
+# create_group_table()
+# create_group_users_table()
 
-# create_user("user","user","user","user")
-# create_user("user1","user1","user1","user1")
-#
-# create_category("savings")
-# create_category("food")
-#
-# create_expense("index500",10,1,1)
-#
-#
-# create_group("nuomininkai")
-#
-# create_group("seimos_islaidos")
-#
 
 def join_expenses_by_user(user_id):
     query = """SELECT User.first_name,Expense.title,amount  FROM Expense
@@ -46,10 +38,8 @@ def select_user_expense_by_date(user_id, date_from="2020-01-01", date_to="2021-0
     params = [user_id, date_from, date_to]
     select_query(query, params)
 
-# create_expense("maistas",10.10,2,2)
 # join_expenses_by_user(2)
 # join_grouped_users(2)
-
-select_user_expense_by_date(2,"2021-01-01","2022-01-01")
+# select_user_expense_by_date(2,"2021-01-01","2022-01-01")
 
 
